@@ -10,7 +10,7 @@ source:
   sha256: 33eff6eaf08d2f603749ab8fb479ec36decd93f25eaffed897c454a02241f724
 
 build:
-  number: 0
+  number: 1
   # Julia and libcxxwrap-julia have not been packaged for conda on Windows
   skip: True  # [win]
 
