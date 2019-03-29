@@ -1,5 +1,5 @@
 {% set name = "xtensor-julia" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/QuantStack/xtensor-julia/archive/{{ version }}.tar.gz
-  sha256: 33eff6eaf08d2f603749ab8fb479ec36decd93f25eaffed897c454a02241f724
+  sha256: 8ef610ae8dcaece28d7ff33df17a09dc421b9f3e83cef7520208807df881ae6f
 
 build:
   number: 0
