@@ -1,5 +1,5 @@
 {% set name = "xtensor-julia" %}
-{% set version = "0.8.4" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/QuantStack/xtensor-julia/archive/{{ version }}.tar.gz
-  sha256: bc031b7874a11ab969ad64b0decf970bfc8ce3496e37afab2f6bb5e87523c5e4
+  sha256: c62d23365d02cc463155347042cf830d4c09ac4c79bc7bdd5d18d21c0c8ba802 
 
 build:
   number: 0
@@ -19,8 +19,8 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
   host:
-    - xtl >=0.6.5,<0.7
-    - xtensor >=0.20.8,<0.21
+    - xtl >=0.6.9,<0.7
+    - xtensor >=0.21.2,<0.22
     - libcxxwrap-julia >=0.5.3,<0.6
   run:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
