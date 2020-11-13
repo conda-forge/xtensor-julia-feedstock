@@ -10,7 +10,7 @@ source:
   sha256: c62d23365d02cc463155347042cf830d4c09ac4c79bc7bdd5d18d21c0c8ba802 
 
 build:
-  number: 0
+  number: 1
   # Julia and libcxxwrap-julia have not been packaged for conda on Windows
   skip: True  # [win]
 
@@ -32,9 +32,9 @@ test:
     - test -f ${PREFIX}/include/xtensor-julia/jlarray.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-julia/xtensor-juliaConfig.cmake  # [unix]
     - test -f ${PREFIX}/lib/cmake/xtensor-julia/xtensor-juliaConfigVersion.cmake  # [unix]
-    - if exist %LIBRARY_PREFIX%\include\xtensor-julia\jlarray.hpp (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-juliaConfig.cmake (exit 0) else (exit 1)  # [win]
-    - if exist %LIBRARY_PREFIX%\lib\cmake\xtensor-juliaConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\include\xtensor-julia\jlarray.hpp (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-julia\xtensor-juliaConfig.cmake (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-julia\xtensor-juliaConfigVersion.cmake (exit 1)  # [win]
 
 about:
   home: http://quantstack.net/xtensor
@@ -51,3 +51,4 @@ extra:
     - SylvainCorlay
     - JohanMabille
     - wolfv
+    - davidbrochart
