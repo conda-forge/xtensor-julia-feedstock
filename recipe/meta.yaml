@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/QuantStack/xtensor-julia/archive/{{ version }}.tar.gz
+  url: https://github.com/xtensor-stack/xtensor-julia/archive/{{ version }}.tar.gz
   sha256: c62d23365d02cc463155347042cf830d4c09ac4c79bc7bdd5d18d21c0c8ba802 
 
 build:
-  number: 1
+  number: 2
   # Julia and libcxxwrap-julia have not been packaged for conda on Windows
   skip: True  # [win]
 
@@ -37,14 +37,14 @@ test:
     - if not exist %LIBRARY_PREFIX%\lib\cmake\xtensor-julia\xtensor-juliaConfigVersion.cmake (exit 1)  # [win]
 
 about:
-  home: http://quantstack.net/xtensor
+  home: https://xtensor-julia.readthedocs.io
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: 'Julia bindings for the xtensor C++ multi-dimensional array library.'
   description: 'Multi dimensional arrays with broadcasting and lazy computing'
-  doc_url: http://xtensor-julia.readthedocs.io
-  dev_url: https://github.com/QuantStack/xtensor-julia
+  doc_url: https://xtensor-julia.readthedocs.io
+  dev_url: https://github.com/xtensor-stack/xtensor-julia
 
 extra:
   recipe-maintainers:

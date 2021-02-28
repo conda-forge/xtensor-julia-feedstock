@@ -1,7 +1,7 @@
 About xtensor-julia
 ===================
 
-Home: http://quantstack.net/xtensor
+Home: https://xtensor-julia.readthedocs.io
 
 Package license: BSD-3-Clause
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xtensor-julia-f
 
 Summary: Julia bindings for the xtensor C++ multi-dimensional array library.
 
-Development: https://github.com/QuantStack/xtensor-julia
+Development: https://github.com/xtensor-stack/xtensor-julia
 
-Documentation: http://xtensor-julia.readthedocs.io
+Documentation: https://xtensor-julia.readthedocs.io
 
 Multi dimensional arrays with broadcasting and lazy computing
 
@@ -138,9 +138,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
@@ -148,6 +148,7 @@ Feedstock Maintainers
 
 * [@JohanMabille](https://github.com/JohanMabille/)
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
+* [@conda-forge/xtensor](https://github.com/conda-forge/xtensor/)
 * [@davidbrochart](https://github.com/davidbrochart/)
 * [@wolfv](https://github.com/wolfv/)
 
