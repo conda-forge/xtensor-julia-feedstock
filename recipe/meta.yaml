@@ -1,5 +1,5 @@
 {% set name = "xtensor-julia" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/xtensor-stack/xtensor-julia/archive/{{ version }}.tar.gz
-  sha256: c62d23365d02cc463155347042cf830d4c09ac4c79bc7bdd5d18d21c0c8ba802 
+  sha256: fb3860062efada79011f982c185c15e13b6361de2d8e96b024a44f318e114547
 
 build:
-  number: 2
+  number: 0
   # Julia and libcxxwrap-julia have not been packaged for conda on Windows
   skip: True  # [win]
 
@@ -18,10 +18,11 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+    - make
   host:
-    - xtl >=0.6.9,<0.7
-    - xtensor >=0.21.2,<0.22
-    - libcxxwrap-julia >=0.5.3,<0.6
+    - xtl >=0.7.4,<0.8
+    - xtensor >=0.24.0,<0.25
+    - libcxxwrap-julia >=0.8.3,<0.9
   run:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('xtensor', max_pin='x.x') }}
