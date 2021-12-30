@@ -1,5 +1,5 @@
 {% set name = "xtensor-julia" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/xtensor-stack/xtensor-julia/archive/{{ version }}.tar.gz
-  sha256: fb3860062efada79011f982c185c15e13b6361de2d8e96b024a44f318e114547
+  sha256: 1555c5f58eb23eaa6223727baaddc47258e2612786cd8e446be31c2ec93f777e
 
 build:
   number: 0
   # Julia and libcxxwrap-julia have not been packaged for conda on Windows
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -42,8 +42,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Julia bindings for the xtensor C++ multi-dimensional array library.'
-  description: 'Multi dimensional arrays with broadcasting and lazy computing'
+  summary: Julia bindings for the xtensor C++ multi-dimensional array library.
+  description: Multi dimensional arrays with broadcasting and lazy computing
   doc_url: https://xtensor-julia.readthedocs.io
   dev_url: https://github.com/xtensor-stack/xtensor-julia
 
