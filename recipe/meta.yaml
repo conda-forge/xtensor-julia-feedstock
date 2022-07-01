@@ -1,5 +1,5 @@
 {% set name = "xtensor-julia" %}
-{% set version = "0.10.1" %}
+{% set version = "0.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/xtensor-stack/xtensor-julia/archive/{{ version }}.tar.gz
-  sha256: 1555c5f58eb23eaa6223727baaddc47258e2612786cd8e446be31c2ec93f777e
+  sha256: baf29a9545728aeae13227a9d9cd5bfb07afa05d0645affc3913eb8545b5e280
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
   host:
     - xtl >=0.7.4,<0.8
     - xtensor >=0.24.0,<0.25
-    - libcxxwrap-julia >=0.8.3,<0.9
+    - libcxxwrap-julia >=0.9.0,<0.10
   run:
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('xtensor', max_pin='x.x') }}
